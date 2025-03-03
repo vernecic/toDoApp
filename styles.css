@@ -38,6 +38,12 @@ h2 {
   justify-content: center;
   margin-bottom: 1rem;
 }
+
+#addTask:focus {
+  border: none;
+  outline: none;
+}
+
 #buttonAdd {
   background-color: rgb(61, 64, 226);
   width: 50px;
@@ -64,16 +70,14 @@ h2 {
   flex-direction: column;
 }
 
-h3 {
+.taskHeader h3 {
   display: flex;
-  justify-content: flex-start;
-  margin-left: 125px;
+  justify-content: center;
 }
 
 .newTask {
   font-size: 1.2rem;
   color: gray;
-  border: 1px solid gray;
   width: 350px;
   padding: 0.5rem;
   border-radius: 5px;
@@ -81,11 +85,16 @@ h3 {
   margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
+}
+
+.newTaskName {
   cursor: pointer;
 }
 
-.newTask:hover {
-  border: 1px solid rgb(61, 64, 226);
+.newTaskButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .editPen {
@@ -105,50 +114,16 @@ h3 {
   margin-right: 10px;
 }
 
-.bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.doneTasks {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 100px;
-  padding: 0.5rem;
-  background-color: rgb(0, 128, 64);
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
+.greenDone {
+  width: 20px;
   cursor: pointer;
-}
-
-.doneTasksContainer {
-  width: 600px;
-  background-color: white;
-  margin-top: 2rem;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 2rem;
+  margin-right: 10px;
 }
 
 .doneTask {
-  font-size: 1.2rem;
-  color: gray;
-  border: 1px solid gray;
-  width: 350px;
-  padding: 0.5rem;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
+  text-decoration: line-through;
+  color: rgb(32, 129, 23);
 }
-
 .hidden {
   display: none;
 }
