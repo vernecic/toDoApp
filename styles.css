@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: rgb(25, 24, 49);
+  font-family: "Sarabun", sans;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h2 {
+  color: black;
+  font-size: 2.5rem;
+}
+
+.container {
+  width: 600px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.inputAddTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+#buttonAdd {
+  background-color: rgb(61, 64, 226);
+  width: 50px;
+  height: 48px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+#addTask {
+  background-color: rgba(240, 240, 240, 0.473);
+  padding: 0.8rem;
+  width: 300px;
+  font-size: 1.2rem;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+}
+
+h3 {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 125px;
+}
+
+.newTask {
+  font-size: 1.2rem;
+  color: gray;
+  border: 1px solid gray;
+  width: 350px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.newTask:hover {
+  border: 1px solid rgb(61, 64, 226);
+}
+
+.editPen {
+  width: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.trashCan {
+  width: 20px;
+  cursor: pointer;
+}
+
+.done {
+  width: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doneTasks {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100px;
+  padding: 0.5rem;
+  background-color: rgb(0, 128, 64);
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.doneTasksContainer {
+  width: 600px;
+  background-color: white;
+  margin-top: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.doneTask {
+  font-size: 1.2rem;
+  color: gray;
+  border: 1px solid gray;
+  width: 350px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
