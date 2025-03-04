@@ -6,7 +6,8 @@ const doneTasksContainer = document.querySelector(".doneTasksContainer");
 
 let allTodos = [];
 
-buttonAdd.addEventListener("click", () => {
+// Funkcija za dodavanje taska u task listu
+function addTaskToList() {
   const addedTask = inputField.value;
   if (!addedTask) return; // ne moze bit prazno
   console.log(addedTask);
@@ -16,16 +17,29 @@ buttonAdd.addEventListener("click", () => {
   allTodos.push(addedTask);
   inputField.value = "";
   console.log(allTodos);
+}
+
+//Enter dodaje task u task listu
+inputField.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    addTaskToList();
+  }
 });
+
+buttonAdd.addEventListener("click", addTaskToList);
 
 tasklist.addEventListener("click", (event) => {
   if (event.target.classList.contains("trashCan")) {
+    // even.target su elementi na koje se klika, i ako u njemu postoji trashCan onda se nastavlja
     const parentTask = event.target.closest(".newTask");
     if (parentTask) {
       parentTask.remove();
     }
   }
-  if (event.target.classList.contains("done")) {
+  if (
+    event.target.classList.contains("done") ||
+    event.target.classList.contains("newTaskName")
+  ) {
     const parentTask = event.target.closest(".newTask");
     if (parentTask) {
       const greenDone = parentTask.querySelector("#greenDone");
