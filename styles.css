@@ -91,6 +91,10 @@ h2 {
   cursor: pointer;
 }
 
+.newTaskName:hover {
+  color: rgba(16, 17, 83, 0.637);
+}
+
 .newTaskButtons {
   display: flex;
   align-items: center;
